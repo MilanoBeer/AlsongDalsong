@@ -2,7 +2,7 @@
 ### 빅데이터 추천 프로젝트
 <div align="center">
   <br />
-  <img src="./assets/Scroll-Page-Top.png" alt="SellerB" width = "75%"/>
+  <img src="./assets/image/Scroll-Page-Top.png" alt="AlsongDalsong" width = "75%"/>
   <br />
 </div>
 
