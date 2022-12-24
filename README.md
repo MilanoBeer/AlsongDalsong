@@ -1,20 +1,23 @@
-# 알쏭달쏭
+# 📗 Alsong Dalsong : 일기를 쓰면, 노래를 추천해드려요
+### 빅데이터 추천 프로젝트
+<div align="center">
+  <br />
+  <img src="./assets/Scroll-Page-Top.png" alt="SellerB" width = "75%"/>
+  <br />
+</div>
 
-SSAFY 7기 특화 빅데이터 추천 프로젝트
+## :pushpin: 목차
 
-<img src="/uploads/d4bc93dce6a31af56f4f3853430b7f1e/logo.jpg" width="50%" height="50%">
-
-> 사용자의 일기 내용을 분석하여 그날의 감정에 맞는 플레이리스트를 추천해주는 서비스
-
-## 목차
-
-- [프로젝트 개요](#프로젝트-개요)
+- [프로젝트 소개](#프로젝트-소개)
+- [프로젝트 상세](#프로젝트-상세)
 - [프로젝트 설계](#프로젝트-설계)
 - [기술스택](#기술스택)
+- [개발 기간](#개발-기간)
+- [팀원 소개](#팀원-소개)
 
 </br>
 
-# 프로젝트 개요
+# 프로젝트 소개
 
 ## 소개
 
@@ -24,7 +27,7 @@ SSAFY 7기 특화 빅데이터 추천 프로젝트
 
 사용자는 자신의 취향을 바탕으로 그 날의 기분에 적합한 노래를 추천 받을 수 있습니다.
 
-## 서비스 화면
+# 프로젝트 상세
 
 1. 일기 작성
 
@@ -115,3 +118,34 @@ SSAFY 7기 특화 빅데이터 추천 프로젝트
 |<img src="/uploads/589a0439a71fb84a844d1814f42b72bf/AWS-EC2.svg" alt="EC2" width="50px" height="50px"/>|<img src="https://profilinator.rishav.dev/skills-assets/jenkins-icon.svg" alt="jenkins" width="50px" height="50px"/>|<img src="https://profilinator.rishav.dev/skills-assets/docker-original-wordmark.svg" alt="docker" width="50px" height="50px"/>|<img src="https://wtit.com/wp-content/uploads/2022/03/NGINX-Icon.svg" width="50px" />
 |:-:|:-:|:-:|:-:|
 |AWS EC2|Jenkins|Docker|Nginx|
+
+</br>
+
+# 개발 기간
+### 22.08.22 ~ 22.10.07
+
+
+
+</br>
+
+# 💝 팀원 소개
+
+<table>
+    <tr>
+        <td height="140px" align="center"> <a href="https://github.com/pjuju">
+            <img src="https://avatars.githubusercontent.com/u/97617731?v=4" width="140px" /> <br><br> 박주현 <br>(Data / Back-End) </a> <br></td>
+        <td height="140px" align="center"> <a href="https://github.com/KHyoseon">
+            <img src="https://avatars.githubusercontent.com/u/58212404?v=4" width="140px" /> <br><br> 김효선 <br>(Back-End) </a> <br></td> 
+        <td height="140px" align="center"> <a href="https://github.com/sskong777">
+            <img src="https://avatars.githubusercontent.com/u/97655673?v=4" width="140px" /> <br><br> 홍석현 <br>(Back-End) </a> <br></td>
+        <td height="140px" align="center"> <a href="https://github.com/MilanoBeer">
+            <img src="https://avatars.githubusercontent.com/u/86315623?v=4" width="140px" /> <br><br> 신혜연 <br>(Front-End) </a> <br></td>
+        <td height="140px" align="center"> <a href="https://github.com/jotreee">
+            <img src="https://avatars.githubusercontent.com/u/97591033?v=4" width="140px" /> <br><br> 조경수 <br>(Data / Front-End) </a> <br></td> 
+        <td height="140px" align="center"> <a href="https://github.com/sojung13">
+            <img src="https://avatars.githubusercontent.com/u/97655624?v=4" width="140px" /> <br><br> 박소정 <br>(Font-End) </a> <br></td>
+    </tr>
+</table>
+
+
+
