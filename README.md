@@ -31,35 +31,35 @@
 
 1. 일기 작성
 
-![일기작성](/uploads/204636e06a48cec18bc3cd02d2b3388b/일기작성.PNG)
+![일기작성](/assets/작성.PNG)
 
 </br>
 
-![일기상세](/uploads/0cb1151a8195ccb6c7ea47663fd00897/일기상세.PNG)
+![일기상세](/assets/일기상세.PNG)
 
 </br>
 
 2. 스티커
 
-![스티커](/uploads/95fdb25b8eabe8b0ddae4808bff3d9e5/스티커.PNG)
+![스티커](/assets/스티커.PNG)
 
 </br>
 
 3. 음악 추천
 
-![음추목록](/uploads/baf541f8c56acec02bee8ed933da925f/음추목록.PNG)
+![음추목록](/assets/음추목록.PNG)
 
 </br>
 
-![음추](/uploads/4d09da6699aeea4ef082ae906e481047/음추.PNG)
+![음추](/assets/음추.PNG)
 
 </br>
 
-![마플목록](/uploads/0cf3347d994fd5aa110d7e5c7af3bb7f/마플목록.PNG)
+![마플목록](/assets/마플목록.PNG)
 
 </br>
 
-![마플](/uploads/cf1e9c2fa4e93471b631199121b25927/마플.PNG)
+![마플](/assets/마플.PNG)
 
 </br>
 
@@ -71,15 +71,15 @@
 
 ## 와이어프레임
 
-![와이어프레임](/uploads/766be01e94fc7bf43609f319afb75ab7/와이어프레임.png)
+![와이어프레임](/assets/와이어프레임.png)
 
 ## ERD
 
-![erd](/uploads/d8c453c24f51714336813e78dc74a5bd/erd.png)
+![erd](/assets/erd.png)
 
 ## 시스템 아키텍처
 
-![시스템_아키텍처](/uploads/6fdb14847750902c1ebd1ae396c4ca0c/시스템_아키텍처.png)
+![시스템_아키텍처](/assets/시스템_아키텍처.png)
 
 ## API 명세서
 
