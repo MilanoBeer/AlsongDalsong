@@ -30,36 +30,35 @@
 # 프로젝트 상세
 
 1. 일기 작성
-
-![일기작성](/assets/작성.PNG)
+<img src="./assets/image/작성.PNG" alt="AlsongDalsong" width = "80%"/>
 
 </br>
 
-![일기상세](/assets/일기상세.PNG)
+<img src="./assets/image/일기상세.PNG" alt="AlsongDalsong" width = "80%"/>
 
 </br>
 
 2. 스티커
 
-![스티커](/assets/스티커.PNG)
+<img src="./assets/image/스티커.PNG" alt="AlsongDalsong" width = "80%"/>
 
 </br>
 
 3. 음악 추천
 
-![음추목록](/assets/음추목록.PNG)
+<img src="./assets/image/음추목록.PNG" alt="AlsongDalsong" width = "80%"/>
 
 </br>
 
-![음추](/assets/음추.PNG)
+<img src="./assets/image/음추.PNG" alt="AlsongDalsong" width = "80%"/>
 
 </br>
 
-![마플목록](/assets/마플목록.PNG)
+<img src="./assets/image/마플목록.PNG" alt="AlsongDalsong" width = "80%"/>
 
 </br>
 
-![마플](/assets/마플.PNG)
+<img src="./assets/image/마플.PNG" alt="AlsongDalsong" width = "80%"/>
 
 </br>
 
@@ -71,15 +70,15 @@
 
 ## 와이어프레임
 
-![와이어프레임](/assets/와이어프레임.png)
+<img src="./assets/image/와이어프레임.png" alt="AlsongDalsong" width = "80%"/>
 
 ## ERD
 
-![erd](/assets/erd.png)
+<img src="./assets/image/erd.png" alt="AlsongDalsong" width = "80%"/>
 
 ## 시스템 아키텍처
 
-![시스템_아키텍처](/assets/시스템_아키텍처.png)
+<img src="./assets/image/시스템_아키텍처.png" alt="AlsongDalsong" width = "80%"/>
 
 ## API 명세서
 
@@ -128,7 +127,7 @@
 
 </br>
 
-# 💝 팀원 소개
+## 💝 팀원 소개
 
 <table>
     <tr>
