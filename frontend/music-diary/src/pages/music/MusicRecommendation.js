@@ -9,9 +9,7 @@ import { setNormalChoiceValue } from "../../store/store";
 import { useDispatch } from "react-redux";
 
 const MusicRecommendation = () => {
-     
     const navigate = useNavigate()
-
     return(<div className="music-recommendation">
         <div className="work-area">
             <h1 style={{marginTop:'5vh'}}>플레이리스트 추천</h1>

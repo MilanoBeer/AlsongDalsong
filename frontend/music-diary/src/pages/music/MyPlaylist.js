@@ -14,7 +14,6 @@ const MusicPlaylist = () => {
     const [depressedPlaylist, setDepressedPlaylist]= useState([])
     const [normalPlaylist, setNormalPlaylist] = useState([])
  
-
     useEffect(()=> {
         emotionMusic(1)
         .then((res)=> {

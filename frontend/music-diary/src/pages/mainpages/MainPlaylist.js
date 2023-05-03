@@ -29,7 +29,6 @@ const MainPlaylist = () => {
     const onLogoutBtn = ()=>{
         sessionStorage.removeItem("accessToken");
         sessionStorage.removeItem("refreshToken");
-
         navigate('/')
     }
 
@@ -40,20 +39,14 @@ const MainPlaylist = () => {
     useEffect(()=>{
         const user_id = sessionStorage.getItem("user_id")
         
-        console.log("username:", storeUserName)
-
         getUserInfoApi(user_id)
         .then((res)=>{
-            console.log("in MainNote:", JSON.stringify(res.data.data.image_url))
-
-   
             setUserName(res.data.data.username)
             setUserImage(res.data.data.image_url)
 
         })
         .catch((err)=>{
             console.log(err.data)
-
         })
     }, [])
      

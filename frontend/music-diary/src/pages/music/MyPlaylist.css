@@ -8,7 +8,6 @@ width: 65vw;
 height: 86vh;
 margin-top: 8vh;
 margin-left: 24vw;
-/* background-color: green; */
 
 position: absolute;
 z-index: 1;
@@ -16,67 +15,63 @@ color: black;
 } 
 
 .music-playlist .main-note {
-  /* position: absolute; */
 }
 
 /* 여기까지 모든 페이지들이 공용으로 설정하는 값!!! */
 
-
-
 .music-playlist .playlist {
-width: 59vw;
-height: 55vh;
-/* background-color: green; */
-margin-left: 3vw;
+  width: 59vw;
+  height: 55vh;
+  margin-left: 3vw;
 }
 
 .music-playlist .happy {
-width: 150px;
-height: 150px;
-background-color: #CDE6BF;
-border-radius: 100%;
-margin-left: 3vw;
+  width: 150px;
+  height: 150px;
+  background-color: #CDE6BF;
+  border-radius: 100%;
+  margin-left: 3vw;
 }
 
 .music-playlist .sad {
-width: 150px;
-height: 150px;
-background-color: #CDE6BF;
-border-radius: 100%;
-animation-duration: 0.5s;
+  width: 150px;
+  height: 150px;
+  background-color: #CDE6BF;
+  border-radius: 100%;
+  animation-duration: 0.5s;
 }
 
 .music-playlist .normal {
-width: 150px;
-height: 150px;
-background-color: #CDE6BF;
-border-radius: 100%;
-animation-duration: 1s;
-margin-right: 3vw;
+  width: 150px;
+  height: 150px;
+  background-color: #CDE6BF;
+  border-radius: 100%;
+  animation-duration: 1s;
+  margin-right: 3vw;
 }
 
 .music-playlist .anxious {
-width: 150px;
-height: 150px;
-background-color: #CDE6BF;
-border-radius: 100%;
-animation-duration: 1.5s;
-margin-left: 3vw;
+  width: 150px;
+  height: 150px;
+  background-color: #CDE6BF;
+  border-radius: 100%;
+  animation-duration: 1.5s;
+  margin-left: 3vw;
 }
 
 .music-playlist .depressed {
-width: 150px;
-height: 150px;
-background-color: #CDE6BF;
-border-radius: 100%;
-animation-duration: 2s;
+  width: 150px;
+  height: 150px;
+  background-color: #CDE6BF;
+  border-radius: 100%;
+  animation-duration: 2s;
 }
 
 .music-playlist .angry {
-width: 150px;
-height: 150px;
-background-color: #CDE6BF;
-border-radius: 100%;
-animation-duration: 2.2s;
-margin-right: 3vw;
+  width: 150px;
+  height: 150px;
+  background-color: #CDE6BF;
+  border-radius: 100%;
+  animation-duration: 2.2s;
+  margin-right: 3vw;
 }

@@ -42,11 +42,9 @@ import {BiCaretDown } from 'react-icons/bi'
 
 // lottie
 import Lottie from 'lottie-react'
-// import bookmark from '../../store/lottie/bookmark.json'
 import BookmarkAnimation from "../../store/lottie/BookmarkAnimation";
 import { FcMusic } from 'react-icons/fc'
 import {FcSynchronize } from 'react-icons/fc'
-
 
 import Swal from "sweetalert2";
 // sticker patch method test
@@ -54,10 +52,11 @@ import Swal from "sweetalert2";
 const DetailDiary = () => {
   const { id } = useParams();
 
-  const diaryId = id; //
+  const diaryId = id; 
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
   // diary
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -69,12 +68,9 @@ const DetailDiary = () => {
 
   const [image, setImage] = useState("");
 
-  // const [monthData, setmonthData] = useState([]); // 이달의 전체 일기 정보
-
   const strDate = new Date(date).toLocaleDateString();
 
   // redux : bookmark
-  // store의 state 값 확인중
   const storeBookmark = useSelector((state) => {
     return state.diarySlice.diaryBookmark;
   });
@@ -122,55 +118,31 @@ const DetailDiary = () => {
     }
   };
 
-  // 달 조회를 해야하는 것이 아니다
-  // useEffect(() => {
-  //   getMonthDiary(new Date().getMonth() + 1, new Date().getFullYear())
-  //     .then((res) => {
-  //       setmonthData(res.data);
-  //       console.log("과!연", res.data);
-  //       console.log("이달의 전체 일기 일단 모으기", monthData);
-  //     })
-  //     .catch((e) => {
-  //       console.log("err", e);
-  //     });
-  // }, []);
 
 // 전체 일기를 가져와야 한다
 const [totalDiary, setTotalDiary] = useState([])
 useEffect(()=> {
   getDiaryListApi()
   .then((res)=> {
-    console.log('전체 일기는 ',res.data)
     setTotalDiary(res.data)
   })
   .catch((err)=> {
     console.log(err)
   })
 },[])
-console.log(totalDiary)
 
-  //
   useEffect(() => {
     const user_id = sessionStorage.getItem("user_id");
 
     // 유저가 소유한 스티커팩 조회
     getUserStickerListApi(user_id)
       .then((res) => {
-        // console.log("사용자가 소유한 스티커팩 정보:", JSON.stringify(res.data));
-        // console.log("***************************************************");
-        // setStickerInfo(res.data);
+
         let tmp = [];
         res.data.map((ele, i) => {
           tmp.push(ele.stickerpacks);
-
-          // console.log(tmp)
         });
-        // console.log("최종 tmp:", JSON.stringify(tmp));
         setStickerInfo(tmp);
-
-        // image_url
-        // const image_url = res.data[0].stickers[0].image_url;
-        // console.log(data.stickers[0].image_url)
       })
       .catch((err) => {
         console.log(JSON.stringify(err.data));
@@ -195,8 +167,6 @@ console.log(totalDiary)
 
         // redux : actions
         dispatch(setDiaryBookmarkValue(bookmark));
-        console.log("json 전:", targetDiary);
-        console.log("현재 보고 있는 일기는...", JSON.stringify(targetDiary));
       } else {
         // 일기가 없을 때
         alert("없는 일기입니다.");
@@ -212,6 +182,7 @@ console.log(totalDiary)
       .then((res) => {
         var list = [];
         let video = "";
+
         for (let i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) {
           if (res.data[i].like === true) {
             setHeart("♥");
@@ -252,8 +223,6 @@ console.log(totalDiary)
       });
     
   }, newMusic)
-  
-  
 
   const likeMusic = (music_id, i) => {
     const txt = document.getElementById("heart" + i);
@@ -263,9 +232,8 @@ console.log(totalDiary)
       txt.innerText = "♥";
     }
     makeLike(music_id)
-    
     .then((res) => {
-      console.log("성공?");
+
     })
     .catch((e) => {
       console.log("err", e);
@@ -283,8 +251,6 @@ console.log(totalDiary)
     });
   }
 
-
-  //////////////////////////////////////////////////////////////////////////////
   // 다이어리 remove 함수
   const handleRemove = () => {
 
@@ -306,7 +272,6 @@ console.log(totalDiary)
             '',
             'success'
           )
-
           navigate("/diarylist", { replace: true });
         })
         .catch((err)=>{
@@ -318,16 +283,14 @@ console.log(totalDiary)
 
   const targetDiary = totalDiary.find((it) => parseInt(it.id) === parseInt(id));
  
-  // 북마크 다루기 ////////////////////////////////////////
+  // 북마크 다루기 //
   const handleBookmark = () => {
-    // console.log("RETURN IMAGES:", returnImages[0].image_url);
     if (storeBookmark === false) {
       console.log("북마크 state:", bookmark);
       dispatch(setDiaryBookmarkValue(true));
       makeBookmark(id)
         .then((res) => {
           console.log(JSON.stringify(res.data));
-          // 만약 북마크가 false라면 makeBookmark api를 활용하여 북마크 등록
         })
         .catch((e) => {
           console.log("err", e);
@@ -335,7 +298,6 @@ console.log(totalDiary)
     }
 
     if (storeBookmark === true) {
-      console.log("북마크 state:", bookmark);
       dispatch(setDiaryBookmarkValue(false));
       deleteBookmark(id)
         .then((res) => {
@@ -347,7 +309,7 @@ console.log(totalDiary)
         });
     }
   };
-  ///////////////////////////////////////////////////////////////////////////////////////
+
   const addStickerToPanel = ({ src, width, x, y, sticker_id }) => {
     setImages((currentImages) => [
       ...currentImages,
@@ -395,7 +357,6 @@ console.log(totalDiary)
       tmp.push(element);
     });
 
-    // console.log("origin:", JSON.stringify(originStickers));
     originStickers.map((ele, i) => {
       let origin = {
         sticker_id: originStickers[i].sticker.id,
@@ -406,8 +367,6 @@ console.log(totalDiary)
       tmp.push(origin);
     });
 
-    console.log("보내기 직전:", JSON.stringify(tmp));
-
     const diaryInfo = {
       title,
       content,
@@ -416,18 +375,17 @@ console.log(totalDiary)
       stickers: tmp,
     };
 
-    // patch 날려보장
+    // patch 
     modifyDiaryItem(id, diaryInfo)
       .then((res) => {
-        console.log("되면 좋겟당");
         console.log(JSON.stringify(res.data));
-        // alert("스티커 저장완료")
       })
       .catch((err) => {});
   };
 
   // 스티커 삭제 //
   const deleteSticker = (id) => {
+
     // 화면에 뿌려지는 기존스티커들 => originStickers
     console.log("삭제할 스티커 : ele.id:", id);
     setOriginStickers(originStickers.filter((it) => it.id !== id)); // 삭제 시킨거 현재화면에 바로 반영하려면 필요함
@@ -457,12 +415,10 @@ console.log(totalDiary)
 
     let diary_id = { id };
     diary_id = diary_id.id;
-    console.log("보낼 Diary ID :", diaryId);
 
     modifyDiaryItem(diaryId, diaryInfo)
       .then((res) => {
         console.log(JSON.stringify(res.data));
-        console.log("스티커 수정API success");
       })
       .catch((err) => {
         console.log(err.data);
@@ -475,13 +431,11 @@ console.log(totalDiary)
 
   // 스티커팩 선택하기
   const onChangePackChoice = (packName) => {
-    console.log("선택한 스티커팩 이름 :", packName);
     setChoicePack(packName);
   };
 
   // 스티커팩 선택창 보이기
   const onShowStickerPacks = ()=>{
-    console.log("showStickerPacks:", showPacks)
     setShowPacks(!showPacks)
   }
 
@@ -523,7 +477,6 @@ console.log(totalDiary)
             {/* <img src={rightEmotion(emotion)} className='emotion'></img> */}
             </div>
             <h5 className="content">{content}</h5>
-
           
           {returnImages.length >= 1 ? (
             returnImages.map((ele, i) => {
@@ -552,7 +505,6 @@ console.log(totalDiary)
 
         {/* 일기별 플레이리스트 */}
         <div className="detail-diary-playlist">
-        {/* <p onClick = {()=>remakePlaylist()} style={{cursor: "pointer"}}>⟳</p> */}
         <iframe
             className="playlist-iframe"
 
@@ -605,7 +557,6 @@ console.log(totalDiary)
                       </div>
 
                       <div className="artist-wrapper">
-                        {/* <div>{ele.artist} <FcMusic style={{marginTop:"-0.5vh"}} /></div> */}
                         <div>{ele.artist}</div>
                       </div>
 
@@ -661,15 +612,10 @@ console.log(totalDiary)
                       setImages(newImages);
                     }}
                     onDragEnd={(event) => {
-
                       image.x = event.target.x();
                       image.y = event.target.y();
 
                       onSaveStickerPos()
-                      console.log("stage안의 스티커 선택");
-                      console.log("image.x :", image.x);
-                      console.log("image.y:", image.y);
-                      console.log("image의id: ", image.sticker_id);
                     }}
                     key={i}
                     image={image}
@@ -714,8 +660,6 @@ console.log(totalDiary)
                       className="delete-sticker-btn"
                       style={{
                         marginLeft: `${ele.sticker_x}px`,
-                       
-           
                       }}
                       onClick={() => deleteSticker(ele.id)}
                     >
@@ -732,8 +676,7 @@ console.log(totalDiary)
       </div>
       {/* detail diary 영역 끝 */}
 
-      {/* 5. 스티커 선택창 */}
-
+    {/* 5. 스티커 선택창 */}
     <div className="sticker-choice-toggle">
         <div onClick={onShowStickerPacks}>스티커 붙이기<BiCaretDown /></div>  
     </div>
@@ -760,25 +703,16 @@ console.log(totalDiary)
 
         </div>
         <div className="sticker-btn-wrapper">
-            {/* <div className="sticker-save-btn" onClick={onSaveStickerPos} >
-              스티커 저장
-            </div> */}
-
             <div className="sticker-edit-btn" onClick={onEditStickerPos}>
               스티커 삭제
             </div>
           </div>
         </div>
-
-        {/* <hr /> */}
-
         {stickerInfo.map((pack) => {
-        
-        let eachPack = pack.stickers;
 
+        let eachPack = pack.stickers;
           return (
             <>
-              {/* <button>{pack.name}</button> */}
               {pack.name === choicePack ? (
                 <>
                   <div
@@ -797,7 +731,7 @@ console.log(totalDiary)
                               addStickerToPanel({
                                 src: sticker.image_url,
                                 width: 40,
-                                // 처음에 스티커 생성되는 좌표 위치임
+                                // 처음에 스티커 생성되는 좌표 위치
                                 x: 500,
                                 y: 300,
                                 sticker_id: sticker.id,
@@ -822,21 +756,11 @@ console.log(totalDiary)
             </>
           );
         })}
-        {/* 스티커 위치 저장 완료 버튼,,@ */}
-        {/* <button onClick={onSaveStickerPos} className="sticker-save-btn">
-          저장!
-        </button> */}
-
-        {/* 스티커 삭제 활성화하기 */}
-        {/* <div className="sticker-edit-btn" onClick={onEditStickerPos}>
-          수정
-        </div> */}
       </div>
     </>
   )
   :(
     <>
-
     </>
   )
 }
@@ -844,8 +768,6 @@ console.log(totalDiary)
       <div>
         <MainNote className="main-note"></MainNote>
       </div>
-
-      {/* </div> */}
     </>
   );
 };

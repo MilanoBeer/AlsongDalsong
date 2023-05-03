@@ -87,7 +87,6 @@ function SingupQuestionFour() {
       };
 
       //  -> user patch api
-
       const kakaoUser_id = sessionStorage.getItem("user_id"); // Kakao : user.pk
 
       patchUserInfoApi(kakaoUserInfo, kakaoUser_id)
@@ -102,7 +101,6 @@ function SingupQuestionFour() {
           console.log(err.data);
         });
     }
-    ////////////////////////////////////////////////
     // username이 null이 아닐 경우, 일반적인 가입
     else {
       const userInfo = {
@@ -117,8 +115,6 @@ function SingupQuestionFour() {
         point: 0,
         image_url: "NULL",
       };
-
-      console.log("회원가입 직전:", JSON.stringify(userInfo));
 
       axios
         .post("http://j7d204.p.ssafy.io:8080/rest/accounts/signup/", userInfo)

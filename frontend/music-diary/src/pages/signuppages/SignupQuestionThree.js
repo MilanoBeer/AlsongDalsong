@@ -16,8 +16,8 @@ function SignupQuestionThree() {
 
   const navigate = useNavigate()
 
-    // store의 state바꾸기
-const dispatch = useDispatch();
+  // store의 state바꾸기
+  const dispatch = useDispatch();
 
   const onMoveQuestionFour = () =>{
       navigate('/signup/question/four')

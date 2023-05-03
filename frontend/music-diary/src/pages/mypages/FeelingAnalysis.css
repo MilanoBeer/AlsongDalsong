@@ -3,7 +3,6 @@
 }
 
 .feeling-analysis .main-note {
-    /* position: absolute; */
 }
 
 .feeling-analysis .analysis {
@@ -12,8 +11,7 @@
   height: 93vh;
   margin-top: 7vh;
   margin-left: 24vw;
-  /* background-color: green; */
-
+  /* background-color: reen; */
   position: absolute;
   z-index: 1;
   color: black;
@@ -25,7 +23,6 @@
 }
 
 .feeling-analysis .analysis-graph {
-    /* background-color: black; */
     width: 22vw;
     margin-top: -3vh;
     height: 55vh;
@@ -43,7 +40,6 @@
 .feeling-analysis .feeling-music-type {
     width: 23vw;
     height: 50vh;
-    /* background-color: green; */
     margin-left: 35vw;
     position: absolute;
     margin-top: -3vh;
@@ -51,7 +47,6 @@
 
 .feeling-analysis .music-research {
     margin-bottom: 2vh;
-    /* height: 10vh; */
     width: 20vw;
     margin-left: 1vw;
 }
@@ -59,65 +54,3 @@
 .feeling-analysis .analysis-page-title {
     margin-bottom: 6vh;
 }
-
-
-
-
-/* 저장하기 버튼 css */
-/* .snip1226 {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 500;
-  }
-  .snip1226 * {
-    box-sizing: border-box;
-    -webkit-transition: all 0.35s ease;
-    transition: all 0.35s ease;
-    
-  }
-  .snip1226 li {
-    display: inline-block;
-    list-style: outside none none;
-    margin: 0 1.5em;
-    overflow: hidden;
-    
-  }
-  .snip1226 a {
-    padding: 0.3em 0;
-    color: rgba(255, 255, 255, 0.5);
-    position: relative;
-    display: inline-block;
-    letter-spacing: 1px;
-    margin: 0;
-    text-decoration: none;
-    color: black;
-  }
-  .snip1226 a:before,
-  .snip1226 a:after {
-    position: absolute;
-    -webkit-transition: all 0.35s ease;
-    transition: all 0.35s ease;
-    
-  }
-  .snip1226 a:before {
-    bottom: 100%;
-    display: block;
-    height: 3px;
-    width: 100%;
-    content: "";
-    background-color: #e67e22;
-
-  }
-  .snip1226 a:after {
-    padding: 0.3em 0;
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    content: attr(data-hover);
-    color: black;
-    white-space: nowrap;
-  }
-  .snip1226 li:hover a,
-  .snip1226 .current a {
-    transform: translateY(100%);
-  } */

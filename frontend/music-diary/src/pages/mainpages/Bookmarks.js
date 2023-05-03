@@ -13,9 +13,6 @@ const Bookmarks =() => {
     const navigate = useNavigate();
     let diaryList = useContext(DiaryStateContext);
 
-    
-    //  api
-     
     // 모든 일기 정보를 다 모으기
     const [noticeData, setNoticeData] = useState([])
 
@@ -23,8 +20,6 @@ const Bookmarks =() => {
       getDiaryListApi()
       .then((res)=> {
         setNoticeData(res.data)
-        console.log("모든 일기:", JSON.stringify(res.data))
-        // console.log('모든 일기 잘 모아지나',noticeData)
     })
     .catch((e)=> {
       console.log('err',e)
@@ -34,7 +29,6 @@ const Bookmarks =() => {
   // 북마크 리스트 불러오기
   let bookmark = noticeData.filter(it=> it.bookmarked === true)
 
-  console.log("let bookmark:", JSON.stringify(bookmark));
   useEffect(()=> {
     getBookmarkList()
       .then((res)=>{

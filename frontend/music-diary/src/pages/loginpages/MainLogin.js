@@ -11,7 +11,6 @@ import Swal from "sweetalert2";
 
 // redux store
 import {
-
   setUserEmail,
   setUserName,
   setNormalChoiceValue,
@@ -52,9 +51,6 @@ function MainLogin() {
       .then((res) => {
         console.log("로그인한 유저 정보:", JSON.stringify(res.data));
 
-
-
-        
         // access 토큰, refresh 토큰, user id 정보 담기
           sessionStorage.setItem("accessToken", res.data.data.token.access_token)
           sessionStorage.setItem("refreshToken", res.data.data.token.refresh_token)
@@ -66,7 +62,6 @@ function MainLogin() {
           dispatch(setAngryChoiceValue(res.data.data.angry))
           dispatch(setDepressedChoiceValue(res.data.data.depressed))
 
-
           navigate("/calender");
       })
       .catch((err) => {
@@ -75,19 +70,12 @@ function MainLogin() {
           icon: 'error',
           title: '이메일 또는 비밀번호를 잘못 입력했습니다',
           text: '입력하신 내용을 다시 확인해주세요.',
-          // footer: '<a href="">Why do I have this issue?</a>'
         })
-        
       });
-
-
   };
-
-
 
   // 구글 로그인 버튼 클릭 후
   const onGoogleLoginBtn = () => {
-    // googleLoginApi()
 
     googleLoginApi()
       .then((res) => {
@@ -106,7 +94,6 @@ function MainLogin() {
   const GOOGLE_CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID
   const GOOGLE_CALLBACK_URI = 'http://j7d204.p.ssafy.io/google/login/callback/'
   const GOOGLE_AUTH_URL = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${GOOGLE_CLIENT_ID}&response_type=code&redirect_uri=${GOOGLE_CALLBACK_URI}&scope=${scope}`
-
 
 
   return (

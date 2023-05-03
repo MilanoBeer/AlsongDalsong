@@ -14,8 +14,6 @@ const EditDiary =() =>{
         getMonthDiary(new Date().getMonth() + 1, new Date().getFullYear())
       .then((res)=> {
         setNoticeMonthData(res.data)
-        console.log('과!연',res.data)
-        // console.log('이달의 전체 일기 일단 모으기',noticeMonthData)
       })
       .catch((e)=> {
         console.log('err',e)

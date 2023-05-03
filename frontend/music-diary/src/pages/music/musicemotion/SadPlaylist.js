@@ -48,7 +48,6 @@ const SadPlaylist = () => {
         }
         makeLike(music_id)
         .then((res) => {
-          console.log("성공?");
         })
         .catch((e) => {
           console.log("err", e);
@@ -86,12 +85,9 @@ const SadPlaylist = () => {
             var idName = "heart" + i;
             return (
               <>
-                
                   <div className="heart-wrapper" >
-                  
                     <>
                       <div  
-                        // className="fill-heart"
                         id={idName}
                         style={{
                           cursor: "pointer", color:"red"
@@ -105,9 +101,7 @@ const SadPlaylist = () => {
                      {ele.name} 
                     </div>
                   </div>
-
                   <div className="artist-wrapper">
-                    {/* <div>{ele.artist} <FcMusic style={{marginTop:"-0.5vh"}} /></div> */}
                     <div>{ele.artist}</div>
                   </div>
               </>

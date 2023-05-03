@@ -7,11 +7,9 @@ import Button from "../../components/Common/Button";
 function OpenIntroPage() {
 
   const navigate = useNavigate()
-
   const moveIntroPageTwo= () =>{
     navigate('/intro/open/two')
   }
-
 
   return (
     <>
@@ -32,7 +30,6 @@ function OpenIntroPage() {
               </dl>
 
               <div className="hidden-area-left-2"></div>
-
               <div className="hidden-area-right-1"></div>
 
               <div className="intro-ment-1">

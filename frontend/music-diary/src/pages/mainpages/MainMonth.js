@@ -5,7 +5,6 @@ import {useNavigate} from 'react-router-dom'
 import { getMonthDiary,getDiaryListApi } from "../../api/diaryApi";
 import Button from "../../components/Common/Button";
 import './MainMonth.css'
-// import './Dropdown.scss'
 import Lottie from 'lottie-react';
 import PencilWriting from '../../store/lottie/pencil-writing.json'
 
@@ -32,7 +31,6 @@ const MainMonth =() => {
 
   const ControlDateMenu = React.memo(({ value, onChange, optionList }) => {
     return (
-        // <div>
           <select
             value={value}
             onChange={(e) => onChange(e.target.value)}
@@ -46,7 +44,6 @@ const MainMonth =() => {
               </option>
             ))}
           </select>
-        // </div>
     );
   });
 
@@ -70,7 +67,6 @@ const MainMonth =() => {
   });
 
   // 감정별, 날짜별로 분류하는 로직
-  
   const getProcessedDiaryList = () => {
     const filterCallBack = (item) => {
       if (filter === "기쁨") {
@@ -102,7 +98,6 @@ const MainMonth =() => {
       }
     };
 
-    // const copyList = JSON.parse(JSON.stringify(data));
     // all이면 전부를, all이 아닌 감정 개별적인 거는 filterCallback에 넘겨주기
     const filteredList =
       filter === "all" ? data : data.filter((it) => filterCallBack(it));
@@ -117,19 +112,17 @@ const MainMonth =() => {
     const [curDate, setCurDate] = useState(new Date());
     const headText = `${curDate.getFullYear()}년 ${curDate.getMonth() + 1}월`;
     
-    // 이달의 일기 모아보는 로직
+  // 이달의 일기 모아보는 로직
   const [noticeData, setNoticeData] = useState([])
   useEffect(()=> {
     getMonthDiary(curDate.getMonth() + 1, curDate.getFullYear())
     .then((res)=> {
       setNoticeData(res.data)
-      console.log(res.data)
     })
     .catch((e)=> {
       console.log('err',e)
     });
   },[curDate.getMonth(), noticeData.length])
-  console.log('지금 이달 일기 개수는',noticeData.length)
 
   useEffect(()=> {
     console.log(noticeData.length)
@@ -153,7 +146,6 @@ const MainMonth =() => {
     const decreaseMonth = () => {
       setCurDate(new Date(curDate.getFullYear(), curDate.getMonth() - 1));
     };
-
 
     return (
     <div className="main-month">
@@ -191,29 +183,6 @@ const MainMonth =() => {
           </ul>  
         </div>
       <div className="diary-list">
-      {/* {
-        getProcessedDiaryList.length < 1 
-        ? (
-          <>
-          <div className="diary-items-none">작성된 일기가 없습니다.</div>
-          <div className="diary-items-none-subtitle">새로운 일기를 작성해주세요!</div>
-          <Lottie animationData={PencilWriting} className="lottie-pencil-writing" />
-          </>
-        )
-        : (
-          <>
-          <div className="diary-items">
-          {getProcessedDiaryList().map((it) => (
-            <DiaryItem key={it.id} {...it} className="diary-items" />
-          ))}
-        </div>
-          </>
-        )
-      } */}
-   
-            {/* <div className="diary-items-none">작성된 일기가 없습니다.</div>
-            <div className="diary-items-none-subtitle">새로운 일기를 작성해주세요!</div>
-            <Lottie animationData={PencilWriting} className="lottie-pencil-writing" /> */}
         <div className="diary-items">
           {getProcessedDiaryList().map((it) => (
             <DiaryItem key={it.id} {...it} className="diary-items" />

@@ -9,8 +9,6 @@ const AngryPlaylist = () => {
     const [musics, setMusics] = useState([]);
     const [youtube, setYoutube] = useState("");
 
-    // useMemo(()=> makePlaylist, [])
-
     useEffect(()=> {
       emotionMusic(4)
       .then((res) => {
@@ -90,10 +88,8 @@ const AngryPlaylist = () => {
               <>
                 
                   <div className="heart-wrapper" >
-                  
                     <>
                       <div  
-                        // className="fill-heart"
                         id={idName}
                         style={{
                           cursor: "pointer", color:"red"
@@ -107,9 +103,7 @@ const AngryPlaylist = () => {
                      {ele.name} 
                     </div>
                   </div>
-
                   <div className="artist-wrapper">
-                    {/* <div>{ele.artist} <FcMusic style={{marginTop:"-0.5vh"}} /></div> */}
                     <div>{ele.artist}</div>
                   </div>
               </>

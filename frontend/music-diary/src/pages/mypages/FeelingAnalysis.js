@@ -68,8 +68,7 @@ const FeelingAnalysis = () => {
   const [angryMoment, setAngryMoment] = useState("");
   const [depressedMoment, setDepressedMoment] = useState("");
 
-
-// store의 state 값 확인중
+  // store의 state 값 확인중
   const storeEmail = useSelector((state) => {
     return state.user.eamil;
   });
@@ -78,9 +77,7 @@ const FeelingAnalysis = () => {
   const [nowClick, setNowClick] = useState('')
 
   let callMyName = (e) => {
-    // console.log(e.target.value);
     setNowClick(e.target.value)
-    // console.log(nowClick)
     setTmp(e.target.value);
     if (e.target.value === "1개월") {
       setColor("set3");
@@ -98,7 +95,6 @@ const FeelingAnalysis = () => {
   const curMonthDate = new Date()
   const curWeekDate = new Date()
   const curDate = new Date()
-  // const cur = new Date(curDate).toLocaleDateString()   // 2022. 9. 28.
   const aYearAgo = new Date(curYearDate.setFullYear(curYearDate.getFullYear() - 1)).toLocaleDateString();  // 2021. 9. 27.
   const aWeekAgo = new Date(curWeekDate.setDate(curWeekDate.getDate() - 6)).toLocaleDateString();  // 2022. 9. 22.
   const sixMonthAgo = new Date(curMonthDate.setMonth(curMonthDate.getMonth() - 5)).toLocaleDateString();  // 2022. 4. 22.
@@ -131,7 +127,6 @@ const FeelingAnalysis = () => {
   const [weekData, setWeekData] = useState([])
   useEffect(()=> {
     setWeekData(fulla.filter((it)=> getDateDiff(it.created_date, aWeekAgo) < 7))
-    // console.log(weekData)
   },[nowClick,fullData])
   const weekHappy = weekData.filter((it)=> it.emotion == '기쁨').length
   const weekSad = weekData.filter((it)=> it.emotion == '슬픔').length
@@ -141,15 +136,12 @@ const FeelingAnalysis = () => {
   const weekDepressed = weekData.filter((it)=> it.emotion == '우울').length
   console.log('이번주간',weekHappy,weekSad,weekAnxious,weekAngry,weekNormal,weekDepressed)
 
-
   // 한달짜리 데이터 가져오기
   const [monthData, setMonthData] = useState([])
   useEffect(()=> {
     getMonthDiary(curDate.getMonth()+1, curDate.getFullYear())
     .then((res)=> {
       setMonthData(res.data)
-      // console.log('이번달의 일기 개수는',res.data)
-      // console.log('이번달 감정 갯수',monthHappy,monthSad,monthAnxious,monthAngry,monthNormal,monthDepressed)
     })
     .catch((e)=> {
       console.log('err',e)
@@ -180,8 +172,6 @@ const FeelingAnalysis = () => {
   const [sixMonthData, setSixMonthData] = useState([])
   useEffect(()=> {
     setSixMonthData(fullData.filter((it)=> getDateDiff(it.created_date, sixMonthAgo) < 150))
-    // console.log('6개월 데이터',sixMonthData)
-    // console.log('6개월 데이터 개수', sixHappy,sixSad,sixAnxious,sixAngry,sixNormal,sixDepressed)
   },[nowClick])
   const sixHappy = sixMonthData.filter((it)=> it.emotion == '기쁨').length
   const sixSad = sixMonthData.filter((it)=> it.emotion == '슬픔').length
@@ -296,7 +286,6 @@ const FeelingAnalysis = () => {
     })
     
   }
-
 
   return (
     <div className="feeling-analysis">

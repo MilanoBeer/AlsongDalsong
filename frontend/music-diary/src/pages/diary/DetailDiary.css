@@ -8,21 +8,20 @@
   position: relative;
 }
 
+/* 모든 페이지들이 공용으로 설정*/
 .detail-diary .detail-diary-item {
-/* 이건 모든 페이지들이 공용으로 설정할 값 */
-width: 64vw;
-height: 93.5vh;
-margin-top: 6vh;
-margin-left: 25.5vw;
+  width: 64vw;
+  height: 93.5vh;
+  margin-top: 6vh;
+  margin-left: 25.5vw;
 
-position: absolute; 
-z-index: 1;
-color: black;
+  position: absolute; 
+  z-index: 1;
+  color: black;
 
-overflow:scroll;
--ms-overflow-style: none;
-/* background-color: green; */
-white-space : nowrap
+  overflow:scroll;
+  -ms-overflow-style: none;
+  white-space : nowrap
 }
 
 .detail-diary .detail-diary-item .fix-top {
@@ -42,25 +41,20 @@ white-space : nowrap
 }
 
 .detail-diary .detail-diary-item::-webkit-scrollbar{
-display:none;
+  display:none;
 }
 
 .detail-diary .detail-diary-item {
   width: 39vw;
   height: 68vh;
-  /* background-color: aqua; */
   margin-left: 27vw;
   margin-top: 17vh;
-  /* margin-top: 12.8vh; */
   margin-bottom: 10vh;
-
-  /* border: 1px solid grey; */
 
   background-color: rgb(244, 240, 240);
   border-radius: 3%;
 
   overflow: auto;
-
 }
 
 .detail-diary .detail-diary-item .content {
@@ -70,7 +64,7 @@ display:none;
   padding-bottom: 1vh;
   width: 94%;
   margin-left:3%;
-  white-space: normal; /* 자동 줄바꿈*/
+  white-space: normal; /* 자동 줄바꿈 */
   text-align: left;
   
   -ms-overflow-style: none;
@@ -92,16 +86,16 @@ position: absolute;
 }
 
 .detail-diary .edit-button {
-margin-top: 86vh;
-margin-left: 58vw;
-position: absolute;
-cursor: pointer;
-z-index: 100;
+  margin-top: 86vh;
+  margin-left: 58vw;
+  position: absolute;
+  cursor: pointer;
+  z-index: 100;
 
-width: 3.5vw;
-border-radius: 10%;
-color:black;
-background-color: rgb(213, 232, 222);;
+  width: 3.5vw;
+  border-radius: 10%;
+  color:black;
+  background-color: rgb(213, 232, 222);;
 
 }
 
@@ -110,15 +104,15 @@ background-color: rgb(213, 232, 222);;
 }
 
 .detail-diary .delete-button {
-margin-top: 86vh;
-margin-left: 62vw;
-position: absolute;
-z-index: 100;
-cursor: pointer;
-width: 3.5vw;
-color: #ececec;;
-border-radius: 10%;
-background-color: #AC5050;
+  margin-top: 86vh;
+  margin-left: 62vw;
+  position: absolute;
+  z-index: 100;
+  cursor: pointer;
+  width: 3.5vw;
+  color: #ececec;;
+  border-radius: 10%;
+  background-color: #AC5050;
 }
 
 .detail-diary .delete-button:hover {
@@ -126,17 +120,17 @@ background-color: #AC5050;
 }
 
 .detail-diary .bookmark {
-position: absolute;
-width: 2vw;
-height: 10vh;
+  position: absolute;
+  width: 2vw;
+  height: 10vh;
 
-margin-left: 60vw;
-margin-top: 13.5vh;
+  margin-left: 60vw;
+  margin-top: 13.5vh;
 
-border-radius: 9%;
+  border-radius: 9%;
 
-cursor: pointer;
-z-index: 100;
+  cursor: pointer;
+  z-index: 100;
 }
 
 .detail-diary .bookmark:hover {
@@ -144,96 +138,50 @@ z-index: 100;
 }
 
 
-/* .detail-diary .date {
-display: flex;
-justify-content: end;
-margin-right: 5vw;
-} */
-
 /* 일기제목 */
 .detail-diary-item .title {
-margin-top: 3.5vh;
-margin-left: 1vw;
+  margin-top: 3.5vh;
+  margin-left: 1vw;
 
-/* width: 80%; */
-justify-content: start;
-
-
+  justify-content: start;
 }
 
 /* 일기 날짜 */
 .detail-diary-item  .date {
   position: absolute;
-
   color:grey;
-
-  /* border-bottom: 1px solid grey; */
 
   justify-content: end;
   width: 20%;
   margin-top: 6vh;
   margin-right: 5vw;
   margin-left:30vw;
-
 }
-
-/* .detail-diary .emotion {
-  width: 5vw;
-  margin-top: -20vh;
-  margin-left: -17vw;
-} */
-
 
 .detail-diary .content {
   border-radius: 3%;
-  
   margin-top: 10.7vh;
 }
 
 .detail-diary .content-img-wrapper {
-  /* border: 1px solid black; */
-
   position: absolute;
   padding: 10px;
 
   width: 90%;
   height: 50%;
 
-  /* border: 1px solid black; */
-
   margin-left: 5%;
-
-  /* object-fit: cover; */
-    /* width: "94%",
-    height: "50vh",
-    border: "1px solid black",
-    marginLeft: "3%" */
-
 }
 
 .detail-diary .content-image {
-  /* position: absolute; */
-
   width:100%;
   height: 100%;
   object-fit: contain;
   border-radius: 10%;
-  /* style={{width:"80%", height:"100%", objectFit:"cover"}} */
 }
- 
-
-
 
 /* stage area */
 .stage-area {
-  /* display: none; */
-  /* background-color: aqua; */
-  /* width: 40vw;
-  height: 60vh; */
-  /* margin-top: 25vh; */
-  /* margin-left: 24vw;  */
-
-  /* margin-top: 800px; */
   position: absolute;
   z-index: 1000;
 }
@@ -246,7 +194,6 @@ justify-content: start;
 
 
 /* 스티커 선택창 */
-
 .sticker-choice-toggle {
   position: absolute;
 
@@ -258,25 +205,16 @@ justify-content: start;
   margin-top: 77vh;
   margin-left: 28vw;
 
-
   cursor: pointer;
-  /* background-color: #b5a686; */
-
   z-index: 9000;
 }
 
 .sticker-choice-toggle:hover {
-  /* background-color: #e3ded3; */
-
-  /* border-bottom: 3px solid #AC5050; */
   cursor: pointer;
 }
 
 .sticker-choice-area {
   position: absolute;
-  /* display: flex; */
-
-  /* border: 1px solid red; */
 
   width: 30vw;
   height: 18vh;
@@ -287,17 +225,13 @@ justify-content: start;
   margin-top: 79vh;
   margin-left: 27vw;
   
-  /* border: 1px solid black; */
   padding: 1%;
   z-index: 1300;
-
-
 }
 
 .sticker-choice-area::-webkit-scrollbar{
   display:none;
-  }
-
+}
 
 .emotion-date {
   display: flex;
@@ -305,12 +239,9 @@ justify-content: start;
   color:black;
   margin-top: 11vh;
   margin-left: 66vw;
-
-  /* border: 1px solid black; */
 }
 
 .emotion-date .youtube-date {
-  /* margin-top: 12vh; */
   border-bottom: 1px solid black; 
   padding-top: 7px;
   margin-left: 40vw;
@@ -323,7 +254,6 @@ justify-content: start;
   width: 3vw;
   margin-left: -38vw;
   margin-top: 2vh;
-  /* border: 1px solid black;  */
 }
 
 .detail-diary .remake-btn {
@@ -353,7 +283,6 @@ justify-content: start;
 .detail-diary .detail-diary-playlist {
   width: 17vw;
   height: 65vh;
-  /* background-color: rgb(104, 123, 130);  */
   position: absolute;
   margin-left: 69vw;
   margin-top:19vh;
@@ -361,12 +290,10 @@ justify-content: start;
   color: black;
 
   border-radius: 3%;
-  /* border: 1px solid grey; */
   overflow:auto;
   -ms-overflow-style: none;
 
   font-family: playlist-font;
-
 }
 
 .detail-diary .detail-diary-playlist::-webkit-scrollbar {
@@ -375,20 +302,16 @@ justify-content: start;
 
 .detail-diary .heart-wrapper {
   display: flex;
-  /* border: 1px solid red; */
   font-size: 15px;
   cursor: pointer;
   z-index: 2100;
 }
-
-
 
 .detail-diary .heart-wrapper:hover {
   /* background-color: grey; */
 }
 
 .detail-diary .music-name-wrapper {
-  /* border: 1px solid orange; */
   margin-left: 0.5vw;
   width: 13vw;
   text-align: left;
@@ -413,7 +336,6 @@ justify-content: start;
 
   margin-right: 10vw;
   margin-left: 0.5vw;
-  /* border: 1px solid red; */
 }
 
 .detail-diary .artist-wrapper > div {
@@ -421,35 +343,22 @@ justify-content: start;
   justify-content: start;
 
   margin-left: 1vw;
-  /* border: 1px solid red; */
 }
 
 .detail-diary .playlist-iframe {
-  /* width="560"
-  height="315" */
-  /* position: absolute; */
   width: 17vw;
   height: 17vh;
   margin-bottom: 1vh;
   margin-top: 4.5vh;
-  /* margin-right: 90%; */
   border-radius: 6%;
 }
 
 .detail-diary .delete-sticker-btn {
-  /* display: none; */
    color: #AC5050;
-
 }
-
-/* .detail-diary .origin-sticker:hover .delete-sticker-btn {
-  display:"";
-
-} */
 
 .detail-diary .origin-sticker {
   cursor: pointer;
-
 }
 
 .pack-name-wrapper {
@@ -458,28 +367,19 @@ justify-content: start;
 
   margin-top:1vh;
   margin-bottom: -5vh;
-  /* style={{width:"100%", marginRight:"28vw", display:"flex", marginBottom:"10vh"}} */
 }
 
 .each-pack-wrapper {
   width: 100%;
-  /* border: 1px solid black; */
-  /* background-color: rgb(217, 235, 217); */
   margin-top: -2vh;
-
-  /* overflow: scroll;
-  -ms-overflow-style: none; */
 }
 
-
 .sticker-btn-wrapper {
-  /* width: auto; */
   width: 30%;
   height: 130%;
   display: absolute;
   color: black;
 
-  /* border: 1px solid black; */
   margin-top:-3vh;
   margin-left:-13vw;
   padding-top:1vh;
@@ -487,31 +387,21 @@ justify-content: start;
 
 /* 스티커 저장완료 버튼 */
 .sticker-save-btn {
-  /* position: absolute; */
   justify-content: end;
   font-size: 12px;
   width: 50%;
-  /* width: 7%; */
   z-index: 9000;
   margin-right: 0.5vw;
   background-color: rgb(236, 246, 241);
   border-radius: 10%;
-  /* padding: 2%; */
-  /* margin-right: 2vw; */
-  /* border: 1px solid black; */
 }
-
-
 
 /* 저장된 스티커 삭제 버튼 */
 .sticker-edit-btn {
-  /* position: absolute; */
   font-size: 12px;
   z-index: 9000;
   width: 50%;
   background-color: rgb(213, 232, 222);
-  /* margin-right: 10vw; */
-  /* border: 1px solid black; */
 }
 
 .sticker-edit-btn:hover {
@@ -522,28 +412,21 @@ justify-content: start;
   background-color: antiquewhite;
 }
 
-
 /* 스티커팩 이름 선택버튼 영역*/
 .sticker-pack-name {
 
   width: 6vw;
   justify-content: start;
-
   margin-right: 1vw;
 
   color: black;
-
   cursor: pointer;
-
   border-bottom: 1px solid grey;
 
-  /* background-color: rgb(205, 182, 182); */
-  /* padding-bottom: ; */
   margin-bottom: 8vh;
 }
 
 .sticker-pack-name:hover {
-  /* font-size: 18px; */
   color: #AC5050;
   border-bottom: 1px solid #AC5050;
 }

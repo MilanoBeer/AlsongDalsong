@@ -1,13 +1,11 @@
 import React from "react";
 import "../../css/intropages/OpenIntroPage.css";
 import { useNavigate } from "react-router-dom";
-
 import Button from '../../components/Common/Button'
 
 import {CgChevronDoubleLeft} from 'react-icons/cg'
 
 function OpenIntroPageTwo() {
-
   const navigate = useNavigate()
 
   const onMoveLoginPage = () => {

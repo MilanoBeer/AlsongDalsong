@@ -1,5 +1,4 @@
 .diary-item {
-    /* width: 80vw; */
     padding-left: 0vw;
 }
 
@@ -40,20 +39,15 @@
 }
 
 .diary-item .diary-item-title {
-    /* margin-left: -1vw; */
     text-overflow:ellipsis;
     overflow:hidden;
     white-space:nowrap;
-    /* background-color: green; */
-    /* width: 13vw; */
-    /* height: 4vh; */
 }
 
 .diary-item .diary-title {
     display: flex;
     justify-content: start;
     text-overflow:ellipsis;
-    /* background-color: green; */
     width: 13vw;
     height: 4vh;
     overflow:hidden;
@@ -62,7 +56,6 @@
 }
 
 .diary-item .diary-item-content {
-    /* margin-left: 0vw; */
     text-align:left;
     padding-left: 1vw;
 }
@@ -71,6 +64,4 @@
     margin-left: 9vw;
     font-size: 1.5vh;
     margin-top: -5vh;
-    /* background-color: pink; */
-    
 }

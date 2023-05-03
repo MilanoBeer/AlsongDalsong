@@ -18,13 +18,10 @@ const MainCalender =() => {
   
     // api 연결하기
     const [noticeData, setNoticeData] = useState([])
-  console.log('지금 보고 있는 달은',today.format('M'))
     useEffect(()=> {
       getMonthDiary(today.format('M'), today.format('YYYY'))
       .then((res)=> {
         setNoticeData(res.data)
-        console.log(res.data)
-        console.log('이달의 일기 잘 모아지나',noticeData)
       })
       .catch((e)=> {
         console.log('err',e)
@@ -52,7 +49,6 @@ const MainCalender =() => {
       }
     }
 
-
       const calendarArr=()=>{
         let result = [];
         let week = firstWeek;
@@ -68,7 +64,6 @@ const MainCalender =() => {
                               {/* TODAY */}
                               {noticeData.map(it=> {
                                 if (new Date(it.created_date).toLocaleDateString() == days.format('YYYY. M. D.'))
-                                  // todayemotion = it.date
                                 return <div onClick={()=>{navigate(`/diary/${it.id}`)}}>
                                 <img src={rightEmotion(it.emotion)} className="calender-emoji animate__animated animate__bounceIn" style={{cursor:'pointer'}}></img>
                                 </div>
@@ -77,8 +72,6 @@ const MainCalender =() => {
                               <p style={{fontSize:"1vw", marginTop:'3vh'}}>TODAY</p>
                             </td>
                         );
-                  //   }
-                  // })}
                   // 이 달이 아닌 경우(지난달, 다음달의 날짜)
                   }else if(days.format('MM') !== today.format('MM')){
                     return(
@@ -116,7 +109,6 @@ const MainCalender =() => {
         return result;
       }
 
-  
     return (
       <div className="main-calender">
         <div className='calender'>
@@ -158,16 +150,10 @@ const MainCalender =() => {
               {calendarArr()}
             </tbody>
           </table>
-
-
-     
-
-
         </div>
         <MainNote className="main-note"/>
       </div>
     );
   }
-
 
 export default MainCalender;

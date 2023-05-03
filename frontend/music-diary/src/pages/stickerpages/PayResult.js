@@ -20,8 +20,6 @@ class PayResult extends React.Component {
         params.pg_token = code;
     }
 
-    
-
     state = {
         params: {
             cid: "TC0ONETIME",
@@ -33,8 +31,6 @@ class PayResult extends React.Component {
             pg_token: "",
         },
     };
-
-    
 
     componentDidMount() {
         const { params } = this.state;
@@ -52,7 +48,6 @@ class PayResult extends React.Component {
         }).then((response) => {
             // 결제 승인에 대한 응답 출력
             console.log(response);
-            
         })
         const pay = qs.stringify({
             charge: params.total_amount,
@@ -70,13 +65,10 @@ class PayResult extends React.Component {
         });
 }
     
-
 render() {
         const onClickButton = () => {
             return <Navigate to="/" />;
         }
-
-
         return (
             <div>
                 <div style={{color:'black',position:'absolute',marginLeft:'50vw',marginTop:'30vh',zIndex:'99'}}>
@@ -93,9 +85,7 @@ render() {
                     onClick={onClickButton}
                 />
 
-
-
-                    {/* </Navigate> */}
+                {/* </Navigate> */}
                 </div>
                 <MainNote style={{width:'100vw',height:'100vh'}}></MainNote>
             </div>
