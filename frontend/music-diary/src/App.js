@@ -5,7 +5,6 @@ import KakaoAuth from './components/loginpages/KakaoAuth'
 import GoogleAuth from './components/loginpages/GoogleAuth'
 
 import {
-  ClosedIntroPage,
   OpenIntroPage,
   OpenIntroPageTwo,
   OpenIntroPageThree,
@@ -86,20 +85,6 @@ export const DiaryDispatchContext = React.createContext();
 
 function App() {
   const [data, dispatch] = useReducer(reducer, []);
-
-  // useEffect(() => {
-  //   const localData = localStorage.getItem("diary");
-  //   if (localData) {
-  //     const diaryList = JSON.parse(localData).sort(
-  //       (a, b) => parseInt(b.id) - parseInt(a.id)
-  //     );
-
-  //     if (diaryList.length >= 1) {
-  //       dataId.current = parseInt(diaryList[0].id) + 1;
-  //       dispatch({ type: "INIT", data: diaryList });
-  //     }
-  //   }
-  // }, []);
 
   const sticker = [{
     id:1,
@@ -187,7 +172,6 @@ function App() {
     <BrowserRouter>
         <Routes>
         <Route path="/konva" element={<Test />} />
-          <Route path="/dd" element={<ClosedIntroPage />} />
           <Route path="/test" element={<IntroScrollPage />} />
           <Route path="/calender" element={<MainCalender />} />
           <Route path="/diarylist" element={<MainMonth />} />

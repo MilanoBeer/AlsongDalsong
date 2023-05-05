@@ -58,8 +58,6 @@ function SignupQuestionTwo() {
        dispatch(setSadChoiceValue(4))
     }
 
-
-
   return (
     <>
         <div style={{position:'relative'}}>
@@ -119,7 +117,6 @@ function SignupQuestionTwo() {
               onClick={()=>{navigate('/')}}></img>
           </div>
         </div>
-
 
         <img src="/assets/img/signup.png" style={{width:'100vw',height:'100vh'}}></img>
     </>

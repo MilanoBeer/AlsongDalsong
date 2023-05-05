@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
-
 import '../../css/intropages/IntroMainPage.css'
-
 
 function IntroMainPage() {
   useEffect(() => {
@@ -20,7 +18,6 @@ function IntroMainPage() {
           }
         }
       }
-      
       window.addEventListener("scroll", reveal);
   });
 

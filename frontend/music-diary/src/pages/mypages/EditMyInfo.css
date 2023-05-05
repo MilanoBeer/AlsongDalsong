@@ -12,8 +12,6 @@
   height: 90vh;
   margin-top: 7vh;
   margin-left: 24vw;
-  /* background-color: green; */
-  /* border: 1px solid blue; */
   position: absolute;
   z-index: 1;
   color: black;
@@ -24,7 +22,6 @@
 }
 
 .edit-myinfo .myinfo-main {
-  /* background-color: black; */
   width: 64vw;
   margin-top: 5vh;
   height: fit-content;
@@ -36,8 +33,6 @@
   margin-left: auto;
   margin-right: auto;
 }
-
-/* *****************************************************/
 
 .edit-myinfo .mimicBtn {
   width: 110px;
@@ -59,11 +54,9 @@
   display: table;
   margin-left: auto;
   margin-right: auto;
-  /* border: 1px solid green; */
 }
 
 .edit-myinfo .diary-img-wrapper {
-  /* position: absolute; */
   width: fit-content;
   height: fit-content;
   display: table;
@@ -88,7 +81,6 @@
   width: 5vw;
 }
 
-/* *****************************************************/
 .edit-myinfo .edit-right-wrapper {
   width: inherit;
   height: fit-content;
@@ -100,7 +92,6 @@
 .edit-myinfo .edit-nickname-btn-wrapper {
   display: flex;
 
-  /* margin-left: ; */
   width: inherit;
   height: fit-content;
   margin-top: 5vh;
@@ -109,18 +100,15 @@
   align-items: center;
   font-size: 16px;
 
-  /* border: 1px solid blue; */
 }
 
 .edit-myinfo .edit-password-btn-wrapper {
   display: flex;
 
-  /* margin-left: ; */
   width: fit-content;
   height: fit-content;
   margin-top: 4vh;
 
-  /* border: 1px solid blue; */
 }
 
 /* 닉네임 input 감싸는 div */
@@ -163,7 +151,6 @@
   height: 45px;
   font-size: 15px;
   color: black;
-  /* border: 1px solid blue; */
   margin-left: 1vw;
   background-color: rgb(189, 226, 189);
 }
@@ -174,13 +161,11 @@
 
 /* 수정폼 감싸는 부부  */
 .edit-myinfo .edit-myinfo-input {
-  /* position: absolute; */
   width: 24vw;
 }
 
 /* 회원탈퇴 관련 */
 .edit-myinfo .quit-btn-wrapper {
-  /* style={{marginTop:"62vh", marginLeft:"26vw"}} */
   width: inherit;
   margin-top: 50px;
   height: 5vh;

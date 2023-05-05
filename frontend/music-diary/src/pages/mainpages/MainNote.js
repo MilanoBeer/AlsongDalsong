@@ -42,20 +42,13 @@ const MainNote = () => {
     useEffect(()=>{
         const user_id = sessionStorage.getItem("user_id")
         
-        console.log("username:", storeUserName)
-
         getUserInfoApi(user_id)
         .then((res)=>{
-            console.log("in MainNote:", JSON.stringify(res.data.data.image_url))
-
-   
             setUserName(res.data.data.username)
             setUserImage(res.data.data.image_url)
-
         })
         .catch((err)=>{
             console.log(err.data)
-
         })
     }, [])
      
@@ -82,25 +75,6 @@ const MainNote = () => {
             <h5 style={{color:"black"}}>{userName}</h5>
 
             </div>
-
-        {/* {
-            userImage === "NULL" || userImage === null 
-            ? (
-                <img src={previewUrl} alt=""
-                    className='profile-image'
-                    style={{width:"7vw"}}
-                />
-            )
-            : (
-                <img src={"https:///"+ userImage} alt=""
-                    className='profile-image'
-                    style={{width:"7vw"}}
-                />
-            )
-        }
-
-            <h5 style={{color:"black"}}>{userName}</h5> */}
-
             <div className='profile-menu'>
                 <div className="menu-diary" onClick={()=>{navigate('/calender')}}>
                     일기장

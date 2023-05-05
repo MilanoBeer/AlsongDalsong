@@ -52,10 +52,6 @@
   justify-content: end;
 }
 
-
-
-
-
 .scroll-test-wrapper section{
   min-height: 100vh;
   display: flex;
@@ -64,19 +60,15 @@
 }
 
 .scroll-test-wrapper section:nth-child(1){
-  /* color: #051e1e; */
   }
 .scroll-test-wrapper section:nth-child(2){
   color: #42455a;
-  /* 어 근데 뭔가 느낌있는 듯?*/
-  /* background: #033030;  */
 } 
 .scroll-test-wrapper section:nth-child(3){
   color: #7c095a;
 }
 .scroll-test-wrapper section:nth-child(4){
   color: #42455a;
-  /* background: #16024e; */
 }
 .scroll-test-wrapper section .container{
   margin: 100px;
@@ -96,7 +88,6 @@
 .scroll-test-wrapper section .text-container .text-box{
   margin: 20px;
   padding: 20px;
-  /* background: #00c2cb; */
 }
 .scroll-test-wrapper section .text-container .text-box h3{
   font-size: 30px;
@@ -140,7 +131,6 @@
   font-size: 150px;
   color: #AC5050;
 
-  /* margin-left: 50px; */
   margin-top: -150px;
 }
 
@@ -160,14 +150,8 @@
 /* 두 번째 설명 section 부분 */
 #intro-second-section{
   color: rgb(212, 199, 199);
-  /* background-color: #033030; */
 }
 
-/* 
-#intro-second-section .container {
-  background-color: aliceblue;
-} 
-*/
 /* 두 번째 설명란 : 왼쪽 텍스트 설명 div 부분 */
 #intro-second-section .left-box {
   background-color: aliceblue;

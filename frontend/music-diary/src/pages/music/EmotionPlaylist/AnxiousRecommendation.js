@@ -11,8 +11,6 @@ const AnxiousRecommendation =() => {
     const [youtube, setYoutube] = useState("")
     const navigate = useNavigate()
     const [ user, setUser ] = useState("")
-    
-    // const [videoid, setVideoid] = useState('')
 
     getUserApi()
     .then((res) => {
@@ -51,29 +49,23 @@ const AnxiousRecommendation =() => {
     useEffect(()=> {
         musicRecommend(2)
         .then((res)=> {
-            // console.log(res.data)
-            
             setAnxiousMusic(res.data)
             let video = "";
             for (let i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) {
-
                 video += (res.data[i].videoid + ",");
-
-                // setVideoid(res.data[i].videoid)
-                // setYoutube("https://www.youtube.com/embed?playlist="+res.data[i].videoid.slice(0,-1))
-                // console.log(videoid)
             }
             setYoutube("https://www.youtube.com/embed?playlist="+video.slice(0,-1));
-        })
+            window.onload = function() {
+              if(!window.location.hash) {
+                  window.location = window.location + '#loaded';
+                  window.location.reload();
+              }
+            }
+          })
         .catch((err)=> {
             console.log(err) 
         })
     },[])
-    console.log('유튜브 주소',youtube)
-
-    
-    // console.log('화난 순간 음악', angryMusic.map((it)=> it.track_name))
-    // const trackName = angryMusic.map((it)=> it.track_name)
 
     return(<div className="anxious-recommendation">
         <div className="work-area">

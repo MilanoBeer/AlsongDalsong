@@ -55,7 +55,6 @@ function OpenIntroPageTwo() {
       </div>
       </div>
 
-
     </>
   );
 }

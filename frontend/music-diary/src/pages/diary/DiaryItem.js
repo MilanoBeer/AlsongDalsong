@@ -28,9 +28,7 @@ const DiaryItem =({...it}) => {
         }
       }
 
-  
     return (<div className="diary-item" >
-
         <Card className='diary-item-card' onClick={()=>{navigate(`/diary/${it.id}`)}}>
             <Card.Body>
                 <div className='diary-item-header'>

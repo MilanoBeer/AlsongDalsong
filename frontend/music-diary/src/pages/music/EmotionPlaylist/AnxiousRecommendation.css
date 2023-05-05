@@ -54,9 +54,7 @@ color: black;
   z-index: 2100;
 }
 
-
 .anxious-recommendation .music-name-wrapper {
-  /* overflow: hidden; */
   width: 15vw;
   text-align: left;
   white-space: nowrap; 
@@ -66,8 +64,6 @@ color: black;
   text-overflow: ellipsis;
   margin-bottom: 1vh;
   margin-top: -0.5vh;
-  /* animation: 2s slide-right;
-  animation-delay: 2s; */
 }
 
 .anxious-recommendation .artist-wrapper {
@@ -82,28 +78,14 @@ color: black;
   white-space: nowrap; 
   margin-top: -0.7vh;
   margin-bottom: 3.5vh;
-  /* overflow: hidden; */
   text-overflow: ellipsis;
-  /* overflow: hidden;
-  animation: 2s slide-right;
-  animation-delay: 2s; */
 }
-
-/* @keyframes slide-right {
-  from {
-    margin-left: 0px;
-  }
-  to {
-    margin-left: -50px;
-  }
-} */
 
 .anxious-recommendation .artist-wrapper > div {
   position: absolute;
   justify-content: start;
   margin-left: 1vw;
 }
-
 
 .anxious-recommendation .ment {
   position: absolute;
@@ -116,4 +98,4 @@ color: black;
   margin-left: 60vw;
   margin-top: 12.5vh;
 }
-/* 여기까지 모든 페이지들이 공용으로 설정하는 값!!! */
+/* 여기까지 모든 페이지들이 공용으로 설정하는 값!*/

@@ -1,4 +1,3 @@
-export { default as ClosedIntroPage } from './intropages/ClosedIntroPage'
 export { default as OpenIntroPage} from './intropages/OpenIntroPage' 
 export { default as OpenIntroPageTwo } from './intropages/OpenIntroPageTwo'
 export { default as OpenIntroPageThree } from './intropages/OpenIntroPageThree'

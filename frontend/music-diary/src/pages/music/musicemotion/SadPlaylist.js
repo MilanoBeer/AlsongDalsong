@@ -27,6 +27,12 @@ const SadPlaylist = () => {
           setYoutube("https://www.youtube.com/embed?playlist="+video.slice(0,-1));
           setMusics(list);
           setMusicBtn(true)
+          window.onload = function() {
+            if(!window.location.hash) {
+                window.location = window.location + '#loaded';
+                window.location.reload();
+            }
+          }
       })
       .catch((e) => {
         console.log("err", e);
@@ -42,7 +48,6 @@ const SadPlaylist = () => {
         }
         makeLike(music_id)
         .then((res) => {
-          console.log("성공?");
         })
         .catch((e) => {
           console.log("err", e);
@@ -57,11 +62,11 @@ const SadPlaylist = () => {
         {youtube==="https://www.youtube.com/embed?playlist="?
         (<>
           <div className="no-video">
-            <h4>재생할 동영상이 없어요!</h4>
-            <p>슬펐던 날의 추천 음악에 하트를 눌러 플레이리스트에 추가해보세요.</p>
+            <h3>재생할 동영상이 없어요!</h3>
+            <p style={{fontSize:"10pt"}}>슬펐던 날의 추천 음악에 하트를 눌러 플레이리스트에 추가해보세요.</p>
           </div>
           <div className="no-music">
-            <h5>재생할 음악이 없어요!</h5>
+            <h4>재생할 음악이 없어요!</h4>
           </div>
         </>):
         (<iframe
@@ -80,12 +85,9 @@ const SadPlaylist = () => {
             var idName = "heart" + i;
             return (
               <>
-                
                   <div className="heart-wrapper" >
-                  
                     <>
                       <div  
-                        // className="fill-heart"
                         id={idName}
                         style={{
                           cursor: "pointer", color:"red"
@@ -99,9 +101,7 @@ const SadPlaylist = () => {
                      {ele.name} 
                     </div>
                   </div>
-
                   <div className="artist-wrapper">
-                    {/* <div>{ele.artist} <FcMusic style={{marginTop:"-0.5vh"}} /></div> */}
                     <div>{ele.artist}</div>
                   </div>
               </>

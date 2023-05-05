@@ -25,7 +25,6 @@ function SignupInfo() {
   const [password, setPassword] = useState()
   const [password2, setPassword2] = useState()
 
-  //******************************************************** */
   // 폼을 만들기 위한 여러가지 요소 불러오기
   const { register, handleSubmit, getValues } = useForm();
 
@@ -33,13 +32,10 @@ function SignupInfo() {
   const onValid = (data) => {
     // 기본으로 data 가져오기
     console.log(data)
-    
     // getValues()로 data 가져오기
     const { name, firstName } = getValues();
   }
-  //******************************************************** */
   const navigate = useNavigate()
-
   const dispatch = useDispatch();
 
   const onEmailHandler = (e) => {
@@ -47,7 +43,6 @@ function SignupInfo() {
   }
   
   const onUsernameHandler = (e) => {
-    console.log("on Username Handler:", e.target.value)
     setUsername(e.target.value)
   }
   
@@ -116,7 +111,6 @@ function SignupInfo() {
       <div className="signup-info-wrapper" style={{position:'relative'}}>
           <div className='signup-info'>
 
- 
             <div style={{marginTop:'5vh'}}>
               <h5 style={{color:'#3D3D3D',marginLeft:'-14vw'}}>이메일 주소</h5>
               <input 
@@ -160,7 +154,6 @@ function SignupInfo() {
               onChange={onPassword2Handler}
             />
             </div>
-
           </div>
           {/* signup-info : end */}
 

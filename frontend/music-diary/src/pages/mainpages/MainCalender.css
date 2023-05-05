@@ -8,7 +8,6 @@
   height: 93vh;
   margin-top: 7vh;
   margin-left: 24vw;
-  /* background-color: green; */
 
   position: absolute;
   z-index: 1;
@@ -20,7 +19,6 @@
 }
 
 .main-calender .another-month {
-  /* background-color: rgb(240, 240, 240); */
   border-radius: 8px;
   color: rgb(192, 192, 192);
 }
@@ -52,7 +50,6 @@
 }
 .main-calender td{
     display:flex;
-    /* border:1px solid gray; */
     width:20%;
     height:8vh;
     justify-content: center;
@@ -85,8 +82,6 @@
 
 /* 모아보기 버튼 디자인 */
 .snip1241 {
-  /* font-family: 'Raleway', Arial, sans-serif; */
-  /* text-align: center; */
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 1px;
@@ -105,7 +100,6 @@
 
 }
 .snip1241 li {
-  /* display: inline-block; */
   list-style: outside none none;
   margin: 0.5em 1em;
   padding: 0;
@@ -157,9 +151,6 @@
   opacity: 1;
 }
 
-
-
-
 /*  */
 .main-calender .calender-emoji {
   position: absolute;
@@ -174,18 +165,14 @@
 }
 
 
-
-
 /* 일기 작성 */
 /* 버튼 디자인 */ 
 .main-calender .button {
   width: 10vw;
   height: 4vh;
-  /* font-family: 'Roboto', sans-serif; */
   font-size: 3vh;
 
   letter-spacing: 2.5px;
-  /* font-weight: 500; */
   color: #000;
   background-color: #fff;
   border: none;

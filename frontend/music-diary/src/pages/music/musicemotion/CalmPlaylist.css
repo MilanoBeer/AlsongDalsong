@@ -13,7 +13,6 @@ width: 64vw;
 height: 93vh;
 margin-top: 7vh;
 margin-left: 24vw;
-/* background-color: green; */
 position: absolute;
 z-index: 1;
 color: black;
@@ -54,9 +53,7 @@ color: black;
   z-index: 2100;
 }
 
-
 .calm-playlist .music-name-wrapper {
-  /* overflow: hidden; */
   width: 15vw;
   text-align: left;
   white-space: nowrap; 
@@ -66,8 +63,6 @@ color: black;
   text-overflow: ellipsis;
   margin-bottom: 1vh;
   margin-top: -0.5vh;
-  /* animation: 2s slide-right;
-  animation-delay: 2s; */
 }
 
 .calm-playlist .artist-wrapper {
@@ -82,21 +77,8 @@ color: black;
   margin-top: -0.7vh;
   margin-bottom: 3.5vh;
   white-space: nowrap; 
-  /* overflow: hidden; */
   text-overflow: ellipsis;
-  /* overflow: hidden;
-  animation: 2s slide-right;
-  animation-delay: 2s; */
 }
-
-/* @keyframes slide-right {
-  from {
-    margin-left: 0px;
-  }
-  to {
-    margin-left: -50px;
-  }
-} */
 
 .calm-playlist .artist-wrapper > div {
   position: absolute;

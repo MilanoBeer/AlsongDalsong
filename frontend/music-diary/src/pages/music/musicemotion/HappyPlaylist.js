@@ -21,7 +21,6 @@ const HappyPlaylist = () => {
               like: res.data[i].like,
               name: res.data[i].track_name,
               artist: res.data[i].artist_name,
-              // heart: heart,
             }
             video += (res.data[i].videoid + ",");
             list.push(test)
@@ -29,6 +28,12 @@ const HappyPlaylist = () => {
           setYoutube("https://www.youtube.com/embed?playlist="+video.slice(0,-1));
           setMusics(list);
           setMusicBtn(true)
+          window.onload = function() {
+            if(!window.location.hash) {
+                window.location = window.location + '#loaded';
+                window.location.reload();
+            }
+          }
         })
         .catch((e) => {
           console.log("err", e);
@@ -82,12 +87,9 @@ const HappyPlaylist = () => {
                 var idName = "heart" + i;
                 return (
                   <>
-                    
                       <div className="heart-wrapper" >
-                      
                         <>
                           <div  
-                            // className="fill-heart"
                             id={idName}
                             style={{
                               cursor: "pointer", color:"red"
@@ -101,9 +103,7 @@ const HappyPlaylist = () => {
                          {ele.name} 
                         </div>
                       </div>
-
                       <div className="artist-wrapper">
-                        {/* <div>{ele.artist} <FcMusic style={{marginTop:"-0.5vh"}} /></div> */}
                         <div>{ele.artist}</div>
                       </div>
                   </>

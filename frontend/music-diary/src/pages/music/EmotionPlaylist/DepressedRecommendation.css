@@ -56,7 +56,6 @@ color: black;
 
 
 .depressed-recommendation .music-name-wrapper {
-  /* overflow: hidden; */
   width: 15vw;
   text-align: left;
   white-space: nowrap; 
@@ -66,8 +65,6 @@ color: black;
   text-overflow: ellipsis;
   margin-bottom: 1vh;
   margin-top: -0.5vh;
-  /* animation: 2s slide-right;
-  animation-delay: 2s; */
 }
 
 .depressed-recommendation .artist-wrapper {
@@ -82,28 +79,14 @@ color: black;
   white-space: nowrap; 
   margin-top: -0.7vh;
   margin-bottom: 3.5vh;
-  /* overflow: hidden; */
   text-overflow: ellipsis;
-  /* overflow: hidden;
-  animation: 2s slide-right;
-  animation-delay: 2s; */
 }
-
-/* @keyframes slide-right {
-  from {
-    margin-left: 0px;
-  }
-  to {
-    margin-left: -50px;
-  }
-} */
 
 .depressed-recommendation .artist-wrapper > div {
   position: absolute;
   justify-content: start;
   margin-left: 1vw;
 }
-
 
 .depressed-recommendation .ment {
   position: absolute;
