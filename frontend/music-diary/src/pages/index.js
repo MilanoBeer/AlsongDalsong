@@ -3,7 +3,7 @@ export { default as OpenIntroPageTwo } from './intropages/OpenIntroPageTwo'
 export { default as OpenIntroPageThree } from './intropages/OpenIntroPageThree'
 export { default as OpenIntroPageFour } from './intropages/OpenIntroPageFour'
 
-export { default as PaginationTest } from './intropages/PaginationTest'
+// export { default as PaginationTest } from './intropages/PaginationTest'
 export {default as Bookmarks } from './mainpages/Bookmarks'
 export {default as MainMonth } from './mainpages/MainMonth'
 export {default as MainCalender } from './mainpages/MainCalender'
@@ -22,8 +22,6 @@ export {default as EditMyInfo } from './mypages/EditMyInfo'
 
 export {default as NewDiary } from './diary/NewDiary'
 export {default as DetailDiary } from './diary/DetailDiary'
-// test
-export { default as Test} from './diary/Test'
 
 export {default as EditDiary } from './diary/EditDiary'
 
