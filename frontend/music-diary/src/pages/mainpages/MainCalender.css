@@ -90,6 +90,12 @@
   margin-left: 50vw;
   margin-top: -5vh;
   color: black;
+
+  position: absolute;
+  font-size: 1.5vw;
+  margin-top: -80vh;
+  margin-left: 70vw;
+
 }
 .snip1241 * {
   -webkit-box-sizing: border-box;
