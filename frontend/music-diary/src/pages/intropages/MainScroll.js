@@ -7,7 +7,7 @@ import styled, { css } from "styled-components";
 import Lottie from 'lottie-react';
 import MusicPlaying from '../../store/lottie/music-playing.json';
 
-import EmotionIcon from './EmotionIcon';
+import EmotionIcon from '../../components/intropages/EmotionIcon';
 
 const MainScroll = () => {
   const navigate = useNavigate();
