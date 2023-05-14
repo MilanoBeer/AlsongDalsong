@@ -2,7 +2,6 @@ import Bookmark from "../diary/Bookmark";
 import MainNote from "./MainNote";
 import {  useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { DiaryStateContext } from "../../App";
 import { getBookmarkList,getDiaryListApi } from "../../api/diaryApi";
 
 import './Bookmarks.css'
@@ -11,7 +10,6 @@ import PencilWriting from '../../store/lottie/pencil-writing.json'
 
 const Bookmarks =() => {
     const navigate = useNavigate();
-    let diaryList = useContext(DiaryStateContext);
 
     // 모든 일기 정보를 다 모으기
     const [noticeData, setNoticeData] = useState([])

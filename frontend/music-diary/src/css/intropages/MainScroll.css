@@ -60,27 +60,38 @@
   }
 }
 
+
+/* .main-scroll {
+  width:6vw;
+} */
+
 .main-scroll .happy {
+  width: 6vw;
   animation: emotion 650ms alternate infinite;
 }
 
 .main-scroll .angry {
+  width: 6vw;
   animation: emotion 900ms alternate infinite;
 }
 
 .main-scroll .anxious {
+  width: 6vw;
   animation: emotion 850ms alternate infinite;
 }
 
 .main-scroll .depressed {
+  width: 6vw;
   animation: emotion 800ms alternate infinite;
 }
 
 .main-scroll .sad {
+  width: 6vw;
   animation: emotion 750ms alternate infinite;
 }
 
 .main-scroll .normal {
+  width: 6vw;
   animation: emotion 700ms alternate infinite;
 }
 
