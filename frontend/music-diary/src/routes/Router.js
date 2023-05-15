@@ -2,11 +2,6 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import KakaoAuth from '../components/loginpages/KakaoAuth';
 import GoogleAuth from '../components/loginpages/GoogleAuth';
 import {
-    OpenIntroPage,
-    OpenIntroPageTwo,
-    OpenIntroPageThree,
-    OpenIntroPageFour,
-    PaginationTest,
     Bookmarks,
     MainCalender,
     MainMonth,
@@ -50,13 +45,8 @@ const Router = () => {
     return (
         <BrowserRouter>
         <Routes>
-          <Route path="/test" element={<IntroScrollPage />} />
           <Route path="/calender" element={<MainCalender />} />
           <Route path="/diarylist" element={<MainMonth />} />
-          <Route path="/intro/open/one" element={<OpenIntroPage />} />
-          <Route path="/intro/open/two" element={<OpenIntroPageTwo />} />
-          <Route path="/intro/open/three" element={<OpenIntroPageThree />} />
-          <Route path="/intro/open/four" element={<OpenIntroPageFour />} />
           <Route path="/bookmarks" element={<Bookmarks />} /> 
           <Route path="/signup/info" element={<SignupInfo />} />
           <Route path="/signup/question/one" element={<SignupQuestionOne />} />

@@ -1,8 +1,3 @@
-export { default as OpenIntroPage} from './intropages/OpenIntroPage' 
-export { default as OpenIntroPageTwo } from './intropages/OpenIntroPageTwo'
-export { default as OpenIntroPageThree } from './intropages/OpenIntroPageThree'
-export { default as OpenIntroPageFour } from './intropages/OpenIntroPageFour'
-
 // export { default as PaginationTest } from './intropages/PaginationTest'
 export {default as Bookmarks } from './mainpages/Bookmarks'
 export {default as MainMonth } from './mainpages/MainMonth'
@@ -32,7 +27,6 @@ export { default as ChargePoint } from './stickerpages/ChargePoint'
 export { default as Payment } from './stickerpages/Payment'
 export { default as PayResult } from './stickerpages/PayResult'
 
-export { default as IntroScrollPage } from './scrollpages/IntroScrollPage'
 export { default as AngryPlaylist } from './music/musicemotion/AngryPlaylist'
 export { default as CalmPlaylist } from './music/musicemotion/CalmPlaylist'
 export { default as DepressPlaylist } from './music/musicemotion/DepressPlaylist'
